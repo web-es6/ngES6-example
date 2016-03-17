@@ -8,7 +8,6 @@ import 'angular-ui-router';
 import directives from './directives';
 import controllers from './controllers';
 import services from './services';
-
 import config from './config';
 
 export const App = 'app';
