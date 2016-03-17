@@ -4,6 +4,7 @@ import { Injector } from 'ngES6';
 
 export default class Main extends Injector {
     static $inject = ['$scope', 'UserService'];
+    static $template = require('./main.html');
 
     constructor(...args) {
         super(...args);

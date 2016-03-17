@@ -6,14 +6,17 @@ import 'angular-sanitize';
 import 'angular-ui-router';
 
 import directives from './directives';
-import controllers from './controllers';
+import controllers, {templateCache} from './controllers';
 import services from './services';
 import config from './config';
 
 export const App = 'app';
 
 const app = angular.module(App, ['ngRoute', 'ngResource', 'ngCookies',
-            'ngSanitize', 'ui.router', directives, services, controllers]);
+                'ngSanitize', 'ui.router', directives, services, controllers])
+            .provider('template', function() {
+                this.$get = () => {return templateCache;};
+            });
 
 config.forEach(c => {
     app.config(c);
