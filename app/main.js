@@ -15,7 +15,7 @@ export const App = 'app';
 const app = angular.module(App, ['ngRoute', 'ngResource', 'ngCookies',
             'ngSanitize', 'ui.router', directives, services, controllers]);
 
-config.forEach((c) => {
+config.forEach(c => {
     app.config(c);
 });
 
