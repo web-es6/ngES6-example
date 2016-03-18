@@ -4,8 +4,8 @@ export default function routeConfig($locationProvider, $routeProvider, templateP
 
     $routeProvider
         .when('/', {
-            template: templateCache.Main,
-            controller: 'Main',
+            template: templateCache.MainCtrl,
+            controller: 'MainCtrl',
         })
         .otherwise({redirectTo: '/'});
 }

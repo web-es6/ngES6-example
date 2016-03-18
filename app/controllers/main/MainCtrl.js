@@ -2,7 +2,7 @@ import './main.less';
 import angular from 'angular';
 import { Injector } from 'ngES6';
 
-export default class Main extends Injector {
+export default class MainCtrl extends Injector {
     static $inject = ['$scope', 'UserService'];
     static $template = require('./main.html');
 
